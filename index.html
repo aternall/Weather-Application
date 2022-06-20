@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/87e55081e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 text-center">
+          <h1 id="city">Helsingborg</h1>
+          <p id="current-date"><small>Mon 25 May 16:25</small></p>
+          <h2 id="current-temp">15°C</h2>
+        </div>
+        <div class="col-6">
+          <i class="fa-solid fa-cloud-sun cloud-sunny-icon"></i>
+        </div>
+        <div class="row mb-4">
+          <div
+            class="col-6 text-center text-dark text-opacity-80"
+            id="weather-description"
+          >
+            Partly Cloudy
+          </div>
+          <div
+            class="col-2 text-center text-secondary text-opacity-50"
+            id="high-temp"
+          >
+            H: 17°C
+          </div>
+          <div
+            class="col-2 text-center text-secondary text-opacity-50"
+            id="low-temp"
+          >
+            L: 5°C
+          </div>
+          <div
+            class="col-2 text-center text-secondary text-opacity-50"
+            id="wind"
+          >
+            W: 1m/s
+          </div>
+        </div>
+        <hr />
+
+        <div class="row mx-1 mt-3 mb-3">
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Mon</h6>
+              <i class="fa-solid fa-cloud-sun cloud-sun-icon"></i>
+              <p>15°/ 9°</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Tue</h6>
+              <i class="fa-solid fa-cloud cloud-icon"></i>
+              <p>11°/ 7°</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Wed</h6>
+              <i class="fa-solid fa-cloud-sun-rain cloud-sun-rain-icon"></i>
+              <p>15/ 8°</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Thu</h6>
+              <i class="fa-solid fa-cloud-showers-heavy showers-heavy-icon"></i>
+              <p>19°/ 9°</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Fri</h6>
+              <i class="fa-solid fa-smog smog-icon"></i>
+              <p>17°/10°</p>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem">
+              <h6 class="card-title">Sat</h6>
+              <i class="fa-solid fa-sun sun-icon"></i>
+              <p>21°/11°</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="d-flex justify-center mx-5 px-5" id="search-form">
+        <input
+          class="form-control me-2"
+          type="text"
+          id="city-input"
+          placeholder="Enter a city"
+        />
+        <input
+          class="btn btn-outline-primary"
+          id="search-input"
+          type="submit"
+          value="Search"
+        />
+      </form>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>
