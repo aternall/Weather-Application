@@ -22,11 +22,12 @@ h6 {
 p {
   color: #011627;
   opacity: 0.3;
+  font-size: 15px;
 }
 
 .cloud-sunny-icon {
   font-size: 130px;
-  padding: 0px 20px;
+  padding: 10px 15px 0px 30px;
   color: #011627;
 }
 
@@ -70,4 +71,11 @@ p {
 .City input {
   padding-right: 10px;
   width: 30px;
+}
+.linkGit {
+  font-size: 10px;
+  color: #011627;
+  opacity: 0.6;
+  padding-top: 15px;
+  text-align: center;
 }
