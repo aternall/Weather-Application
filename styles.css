@@ -22,7 +22,7 @@ h6 {
 p {
   color: #011627;
   opacity: 0.3;
-  font-size: 15px;
+  font-size: 15 px;
 }
 
 .cloud-sunny-icon {
@@ -78,4 +78,7 @@ p {
   opacity: 0.6;
   padding-top: 15px;
   text-align: center;
+}
+.description {
+  text-transform: capitalize;
 }
