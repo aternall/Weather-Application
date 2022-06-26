@@ -82,3 +82,6 @@ p {
 .description {
   text-transform: capitalize;
 }
+.b {
+  font-weight: bold;
+}
