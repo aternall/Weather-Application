@@ -40,7 +40,7 @@ function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#current-temp").innerHTML = `${Math.round(
     response.data.main.temp
-  )}°C`;
+  )}`;
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#high-temp").innerHTML = `H:${Math.round(
@@ -52,6 +52,7 @@ function showTemperature(response) {
   document.querySelector(
     "#wind"
   ).innerHTML = `W:${response.data.wind.speed}m/s`;
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
