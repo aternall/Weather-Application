@@ -60,3 +60,13 @@ function showTemperature(response) {
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let fahrenheitTemp = 14 * 1.8 + 32;
+  let tempElement = document.querySelector("#current-temp");
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let celsiusFahrenheit = document.querySelector("#celsius-fahrenheit");
+celsiusFahrenheit.addEventListener("click", showFahrenheitTemp);

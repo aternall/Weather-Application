@@ -27,15 +27,16 @@ p {
   font-size: 15 px;
 }
 .date {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 
 .cloud-sunny-icon {
   color: #011627;
   position: relative;
-  bottom: 15px;
+  top: 15px;
+  left: 30px;
+  width: 150px;
 }
-
 .cloud-sun-icon {
   font-size: 40px;
   padding: 10px;
@@ -79,8 +80,8 @@ p {
 }
 .linkGit {
   font-size: 10px;
-  color: #e7e7e7;
-  opacity: 0.6;
+  color: black;
+  opacity: 0.4;
   padding-top: 15px;
   text-align: center;
 }
@@ -90,8 +91,8 @@ p {
 .b {
   font-weight: bold;
 }
-.units {
+.weather-temp .units {
   font-size: 15px;
-  font-weight: normal;
-  padding-block-end: 20px;
+  position: relative;
+  top: -28px;
 }

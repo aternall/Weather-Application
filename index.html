@@ -21,29 +21,28 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-6 text-center">
           <h1 id="city">Helsingborg</h1>
           <p class="date" id="current-date"><small>Mon 25 May 16:25</small></p>
+          <div class="clearfix weather-temp">
+            <div class="float-left">
+              <span class="currentTemp" id="current-temp">15</span>
+              <span class="units"
+                >°C | <a href="#" id="celsius-fahrenheit">°F</a></span
+              >
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="row">
-      
-        <div class="col-6 text-center">
-          <span class="currentTemp" id="current-temp">15</span>
-          <span class="units"
-            >°C | <a href="#" id="celsius-fahrenheit">°F</a></span
-          >
+        <div class="col-6">
+          <div class="clearfix">
+            <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+              class="cloud-sunny-icon"
+              id="icon"
+            />
+          </div>
         </div>
-        <div class="col-6 text-center">
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            class="cloud-sunny-icon"
-            alt=""
-            id="icon"
-          />
-        </div>
-        
-                </div>
 
         <div class="row mb-4">
           <div
