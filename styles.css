@@ -96,3 +96,22 @@ p {
   position: relative;
   top: -28px;
 }
+
+.weather-temp .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
+}
+
+.weather-temp .inactive {
+  cursor: default;
+  text-decoration: none;
+}
+
+.weather-temp .inactive:hover {
+  text-decoration: none;
+}
