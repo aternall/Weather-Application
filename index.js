@@ -25,6 +25,35 @@ let month = months[now.getMonth()];
 currentDate.innerHTML = `${day} ${date} ${month} ${hour}:${minutes}`;
 //
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row mx-1 mt-4 mb-3">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2">
+            <div class="card text-center border-0" style="width: 4rem;">
+              <h6 class="card-title">${day}</h6>
+             <img
+              src="https://openweathermap.org/img/wn/10d@2x.png"
+              alt=""
+              width = "63";
+            />
+              <p>
+                <span class="temp1"><strong>15°</strong>/10°</span>
+              </p>
+            </div>
+          </div>
+       
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -85,3 +114,5 @@ celsiusLink.addEventListener("click", showCelsiusTemp);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+displayForecast();

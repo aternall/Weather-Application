@@ -26,7 +26,7 @@
           <p class="date" id="current-date"><small>Mon 25 May 16:25</small></p>
           <div class="clearfix weather-temp">
             <div class="float-left">
-              <span class="currentTemp" id="current-temp">25</span>
+              <span class="currentTemp" id="current-temp">15</span>
               <span class="units"
                 ><a href="#" id="celsius-link" class="active">°C </a>|
                 <a href="#" id="fahrenheit-link" class="inactive">°F</a></span
@@ -44,93 +44,36 @@
             />
           </div>
         </div>
-
-        <div class="row mb-4">
-          <div
-            class="col-6 text-center text-dark text-opacity-80 description"
-            id="weather-description"
-          >
-            clear
-          </div>
-          <div
-            class="col-2 text-center text-secondary text-opacity-50"
-            id="high-temp"
-          >
-            H:17°C
-          </div>
-          <div
-            class="col-2 text-center text-secondary text-opacity-50"
-            id="low-temp"
-          >
-            L:5°C
-          </div>
-          <div
-            class="col-2 text-center text-secondary text-opacity-50"
-            id="wind"
-          >
-            W: 1m/s
-          </div>
+      </div>
+      <div class="row mb-4">
+        <div
+          class="col-6 text-center text-dark text-opacity-80 description"
+          id="weather-description"
+        >
+          clear
         </div>
-        <hr />
-
-        <div class="row mx-1 mt-3 mb-3">
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Mon</h6>
-              <i class="fa-solid fa-cloud-sun cloud-sun-icon"></i>
-              <p>
-                <span class="temp1"><strong>30°</strong></span
-                >/ 9°
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Tue</h6>
-              <i class="fa-solid fa-cloud cloud-icon"></i>
-              <p>
-                <span class="tempTue"><strong>30°</strong>/10°</span>
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Wed</h6>
-              <i class="fa-solid fa-cloud-sun-rain cloud-sun-rain-icon"></i>
-              <p>
-                <span class="tempWed"><strong>30°</strong>/11°</span>
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Thu</h6>
-              <i class="fa-solid fa-cloud-showers-heavy showers-heavy-icon"></i>
-              <p>
-                <span class="tempThu"><strong>29°</strong>/ 9°</span>
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Fri</h6>
-              <i class="fa-solid fa-smog smog-icon"></i>
-              <p>
-                <span class="tempFri"><strong>17°</strong>/10°</span>
-              </p>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card text-center border-0" style="width: 4rem">
-              <h6 class="card-title">Sat</h6>
-              <i class="fa-solid fa-sun sun-icon"></i>
-              <p>
-                <span class="tempSat"><strong>21°</strong>/11°</span>
-              </p>
-            </div>
-          </div>
+        <div
+          class="col-2 text-center text-secondary text-opacity-50"
+          id="high-temp"
+        >
+          H:17°C
+        </div>
+        <div
+          class="col-2 text-center text-secondary text-opacity-50"
+          id="low-temp"
+        >
+          L:5°C
+        </div>
+        <div class="col-2 text-center text-secondary text-opacity-50" id="wind">
+          W: 1m/s
         </div>
       </div>
+      <hr />
+      <div class = "weather-forecast" id = "forecast">
+      
+      </div>
+      </div>
+
 
       <form class="d-flex justify-center mx-5 px-5" id="search-form">
         <input
