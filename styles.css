@@ -115,3 +115,11 @@ p {
 .weather-temp .inactive:hover {
   text-decoration: none;
 }
+
+.pl-3 {
+  padding-left: 50px !important;
+}
+
+.pl-0 {
+  padding-left: 50px !important;
+}
