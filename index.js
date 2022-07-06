@@ -48,7 +48,6 @@ function displayForecast(response) {
           <div class="col-2">
             <div class="card text-center border-0" style="width: 4rem;">
               <h6 class="card-title">${formatDay(forecastDay.dt)}</h6>
-       
              <img
               src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
@@ -65,7 +64,6 @@ function displayForecast(response) {
               </p>
             </div>
           </div>
-       
         `;
     }
   });
@@ -80,16 +78,17 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+function search(city) {
   let apiKey = "b366a246e7ce61f2fb734e1ed208be90";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
+function handleSubmit(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city-input");
+  search(city.value);
+}
 
 function showTemperature(response) {
   celsiusTemp = response.data.main.temp;
@@ -99,15 +98,12 @@ function showTemperature(response) {
   )}`;
   document.querySelector("#weather-description").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("#high-temp").innerHTML = `H:${Math.round(
-    response.data.main.temp_max
-  )}°C`;
-  document.querySelector("#low-temp").innerHTML = `L:${Math.round(
-    response.data.main.temp_min
-  )}°C`;
-  document.querySelector(
-    "#wind"
-  ).innerHTML = `W:${response.data.wind.speed}m/s`;
+  document.querySelector("#humidity").innerHTML = `Humidity: ${Math.round(
+    response.data.main.humidity
+  )}%`;
+  document.querySelector("#wind").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed
+  )}m/s`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -117,29 +113,7 @@ function showTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function showFahrenheitTemp(event) {
-  event.preventDefault();
-  let fahrenheitTemp = celsiusTemp * 1.8 + 32;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = Math.round(fahrenheitTemp);
-}
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
 
-function showCelsiusTemp(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = Math.round(celsiusTemp);
-}
-
-let celsiusTemp = null;
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemp);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-handleSubmit();
+search("Helsingborg");
