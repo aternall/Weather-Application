@@ -2,7 +2,13 @@ let now = new Date();
 let currentDate = document.querySelector("#current-date");
 let date = now.getDate();
 let hour = now.getHours();
+if (hour < 10) {
+  hour = `0${hour}`;
+}
 let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
 
 let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let day = days[now.getDay()];
@@ -116,4 +122,4 @@ function showTemperature(response) {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-search("Helsingborg");
+search("Copenhagen");
